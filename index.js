@@ -9,6 +9,7 @@ const searchFormInput = document.querySelector('.search-form__input');
 searchForm.addEventListener('submit', searchMovies);
 
 const moviesContainer = document.querySelector('.movies');
+const lostContainer = document.querySelector('.lost');
 
 function searchMovies() {
   const searchText = searchFormInput.value;
@@ -22,14 +23,19 @@ async function getData(searchText) {
   const url = `${URL.MOVIE_SEARCH}?query=${searchText}&api_key=${API_KEY}`;
 
   const response = await fetch(url);
-  const data = await response.json();
-
-  showData(data);
+  if (response.ok) {
+    const data = await response.json();
+    showData(data);
+  } else {
+    show404NotFound();
+  }
 }
 
 function showData(data) {
   moviesContainer.textContent = '';
   data['results'].forEach(createMovieItem);
+  lostContainer.classList.add('hidden');
+  moviesContainer.classList.remove('hidden');
 }
 
 function createMovieItem(movieData) {
@@ -40,4 +46,9 @@ function createMovieItem(movieData) {
   </div>`;
 
   moviesContainer.insertAdjacentHTML('beforeend', movieItem);
+}
+
+function show404NotFound() {
+  lostContainer.classList.remove('hidden');
+  moviesContainer.classList.add('hidden');
 }

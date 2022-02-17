@@ -18,13 +18,16 @@ a {
   text-decoration: none;
 }
 
-h3 {
+h2,
+h3,
+p {
   margin: 0;
 }
 
 :root {
   --color-accent: #121829;
   --color-gray-50: #EBEEF5;
+  --color-gray-300: #8E95A9;
   --color-gray-600: #475069;
   --color-gray-700: #323B54;
   --color-gray-800: #20283E;
@@ -45,6 +48,10 @@ body {
   font-size: 16px;
   line-height: 24px;
   background-color: var(--color-accent);
+}
+
+.hidden {
+  display: none !important;
 }
 
 .btn {
@@ -122,7 +129,7 @@ body {
 
 .main {
   min-height: calc(100vh - 160px);
-  padding: 20px 0;
+  padding: 40px 0 120px;
   background: url("./assets/img/bg.png") no-repeat;
   background-size: cover;
 }
@@ -173,6 +180,37 @@ body {
   color: var(--color-warning-500);
   background: rgba(0, 0, 0, 0.65) url("./assets/svg/star.svg") no-repeat left 8px top 10px;
   backdrop-filter: blur(8px);
+}
+
+.lost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lost__inner {
+  padding-top: 360px;
+  max-width: 588px;
+  text-align: center;
+  background: url("./assets/svg/404.svg") no-repeat top center;
+}
+
+.lost__title {
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+  color: var(--color-gray-50);
+}
+
+.lost__text {
+  margin-bottom: 24px;
+  color: var(--color-gray-300);
+}
+
+.lost__btn {
+  padding: 16px 32px;
 }
 
 .footer {
