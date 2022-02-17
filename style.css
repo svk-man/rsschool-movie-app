@@ -308,10 +308,37 @@ body {
 }
 
 .lost__text {
-  margin-bottom: 24px;
   color: var(--color-gray-300);
 }
 
 .footer {
   height: 80px;
+}
+
+.footer__container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+  color: var(--color-gray-300);
+}
+
+.footer__link {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: var(--color-gray-300);
+}
+
+.footer__year {
+  margin-right: auto;
+}
+
+.footer__rss {
+  width: 100px;
+  height: 37px;
+  background: url("./assets/svg/rs_school_js.svg") no-repeat center;
+  background-size: cover;
+  opacity: .77;
 }
