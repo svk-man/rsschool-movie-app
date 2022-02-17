@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 :root {
   --color-accent: #121829;
 }
@@ -24,6 +28,21 @@ body {
 
 .header {
   height: 80px;
+}
+
+.header__container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url("./assets/svg/logo.svg") no-repeat center;
+  background-size: cover;
 }
 
 .main {
