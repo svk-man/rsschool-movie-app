@@ -1,5 +1,11 @@
 @font-face {
   font-family: 'Poppins';
+  src: url("assets/fonts/Poppins-ExtraLight.ttf");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Poppins';
   src: url("assets/fonts/Poppins-Regular.ttf");
   font-weight: 400;
 }
@@ -126,9 +132,13 @@ body {
   column-gap: 8px;
 }
 
+.search-form__input-inner {
+  position: relative;
+}
+
 .search-form__input {
   width: 384px;
-  padding: 12px 16px 12px 56px;
+  padding: 12px 56px;
   border: 1px solid var(--color-gray-700);
   border-radius: 12px;
   font-family: inherit;
@@ -149,6 +159,21 @@ body {
 .search-form__input:focus {
   border-color: var(--color-primary-400);
   outline: none;
+}
+
+.search-form__clear-btn {
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  font-size: 45px;
+  font-weight: 200;
+  color: var(--color-gray-700);
+  transition: .3s;
+}
+
+.search-form__clear-btn:hover {
+  cursor: pointer;
+  color: var(--color-primary-400);
 }
 
 .main {

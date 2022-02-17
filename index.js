@@ -8,9 +8,12 @@ const URL = {
 
 const searchForm = document.querySelector('.search-form');
 const searchFormInput = document.querySelector('.search-form__input');
+const searchFormClearBtn = document.querySelector('.search-form__clear-btn');
+
 searchFormInput.focus();
 
 searchForm.addEventListener('submit', searchMovies);
+searchFormClearBtn.addEventListener('click', clearSearchForm);
 
 const moviesContainer = document.querySelector('.movies');
 moviesContainer.addEventListener('click', searchMovie);
@@ -127,4 +130,8 @@ function show404NotFound() {
   movieContainer.classList.add('hidden');
   moviesContainer.classList.add('hidden');
   lostContainer.classList.remove('hidden');
+}
+
+function clearSearchForm() {
+  searchForm.reset();
 }
