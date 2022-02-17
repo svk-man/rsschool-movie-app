@@ -8,6 +8,7 @@ const URL = {
 
 const searchForm = document.querySelector('.search-form');
 const searchFormInput = document.querySelector('.search-form__input');
+searchFormInput.focus();
 
 searchForm.addEventListener('submit', searchMovies);
 
