@@ -10,8 +10,8 @@
 <body>
   <header class="header">
     <div class="container header__container">
-      <a class="logo header__logo" href="#"></a>
-      <form class="search-form header__form" action="#">
+      <a class="logo header__logo" href="/"></a>
+      <form class="search-form header__form">
         <input class="search-form__input" type="text" placeholder="Search movies">
         <input class="btn search-form__submit" type="submit" value="search">
       </form>
@@ -20,48 +20,13 @@
   <main class="main">
     <div class="container">
       <section class="movies hidden">
-        <div class="movies__item">
+        <a class="movies__item" data-movie-id="101">
           <img class="movies__item-poster" src="./assets/img/movie-poster.jpg" alt="Movie name">
           <h3 class="movies__item-name">Movie name</h3>
           <div class="rating movies__item-rating">8</div>
-        </div>
-        <div class="movies__item">
-          <img class="movies__item-poster" src="./assets/img/movie-poster.jpg" alt="Movie name">
-          <h3 class="movies__item-name">Movie name</h3>
-          <div class="movies__item-rating">8</div>
-        </div>
-        <div class="movies__item">
-          <img class="movies__item-poster" src="./assets/img/movie-poster.jpg" alt="Movie name">
-          <h3 class="movies__item-name">Movie name</h3>
-          <div class="movies__item-rating">8</div>
-        </div>
-        <div class="movies__item">
-          <img class="movies__item-poster" src="./assets/img/movie-poster.jpg" alt="Movie name">
-          <h3 class="movies__item-name">Movie name</h3>
-          <div class="movies__item-rating">8</div>
-        </div>
-        <div class="movies__item">
-          <img class="movies__item-poster" src="./assets/img/movie-poster.jpg" alt="Movie name">
-          <h3 class="movies__item-name">Movie name</h3>
-          <div class="movies__item-rating">8</div>
-        </div>
-        <div class="movies__item">
-          <img class="movies__item-poster" src="./assets/img/movie-poster.jpg" alt="Movie name">
-          <h3 class="movies__item-name">Movie name</h3>
-          <div class="movies__item-rating">8</div>
-        </div>
-        <div class="movies__item">
-          <img class="movies__item-poster" src="./assets/img/movie-poster.jpg" alt="Movie name">
-          <h3 class="movies__item-name">Movie name</h3>
-          <div class="movies__item-rating">8</div>
-        </div>
-        <div class="movies__item">
-          <img class="movies__item-poster" src="./assets/img/movie-poster.jpg" alt="Movie name">
-          <h3 class="movies__item-name">Movie name</h3>
-          <div class="movies__item-rating">8</div>
-        </div>
+        </a>
       </section>
-      <div class="movie">
+      <div class="movie hidden">
         <img class="movie__backdrop" src="./assets/img/movie-backdrop.jpg" alt="Avengers: Endgame">
         <div class="movie__inner">
           <h2 class="movie__title">Avengers: Endgame</h2>
@@ -85,15 +50,15 @@
                   <span class="movie__details-item-value">Adventure,  Science Fiction, Action</span>
                 </li>
               </ul>
+              <button class="btn movie__details-btn">Go Home</button>
             </div>
           </div>
         </div>
       </div>
-      <section class="lost hidden">
+      <section class="lost">
         <div class="lost__inner">
-          <h2 class="lost__title">Lost your way?</h2>
-          <p class="lost__text">Oops! This is awkward. You are looking for something that doesn't actually exist.</p>
-          <button class="btn lost__btn">Go Home</button>
+          <h2 class="lost__title">Sorry, No results found</h2>
+          <p class="lost__text">Let's try to find your movie!</p>
         </div>
       </section>
     </div>

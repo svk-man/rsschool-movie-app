@@ -175,6 +175,10 @@ body {
   backdrop-filter: blur(80px);
 }
 
+.movies__item:hover {
+  cursor: pointer;
+}
+
 .movies__item-poster {
   width: 266px;
   height: 400px;
@@ -306,10 +310,6 @@ body {
 .lost__text {
   margin-bottom: 24px;
   color: var(--color-gray-300);
-}
-
-.lost__btn {
-  padding: 16px 32px;
 }
 
 .footer {
